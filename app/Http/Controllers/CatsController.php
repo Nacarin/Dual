@@ -4,21 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Models\Cat;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class CatsController extends Controller
 {
-    public function showCats()
+    public function showCats(): View
     {
         $cats = Cat::getAllCats();
-        return view('cats', ['cats' => $cats]);
+        return view('cats')
+            ->with('cats',$cats);
     }
 
-    public function showAddCatForm()
+    public function showAddCatForm(): View
     {
         return view('add-cat-form');
     }
 
-    public function addCat(Request $request)
+    public function addCat(Request $request): RedirectResponse
     {
         $request->validate([
             'name' => 'required',
@@ -36,4 +39,10 @@ class CatsController extends Controller
 
         return redirect('/cats');
     }
+
+    public function showCatsImage(): View
+    {
+        return view('catsImage');
+    }
+
 }

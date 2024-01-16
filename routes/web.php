@@ -20,6 +20,7 @@ Route::get('/', function () {
 Route::get('/cats', [CatsController::class, 'showCats']);
 Route::get('/cats/add', [CatsController::class, 'showAddCatForm']);
 Route::post('/cats/add', [CatsController::class, 'addCat']);
+Route::get('/catsImage', [CatsController::class, 'showCatsImage']);
 
 
 

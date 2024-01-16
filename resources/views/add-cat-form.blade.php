@@ -1,8 +1,7 @@
-@extends('sublayout')
-
-@section('sub-title', 'Añadir Nuevo Gato')
+@extends('subtitle')
 
 @section('sub-content')
+    <h2>Añadir Nuevo Gato</h2>
     <form action="{{ url('/cats/add') }}" method="post">
         @csrf
         <label for="name">Nombre:</label>

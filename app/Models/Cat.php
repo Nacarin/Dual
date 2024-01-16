@@ -18,7 +18,7 @@ class Cat extends Model
         return self::all();
     }
 
-    public static function createNewCat($data)
+    public static function createNewCat($data): Cat
     {
         return self::create($data);
     }

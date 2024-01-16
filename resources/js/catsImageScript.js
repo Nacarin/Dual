@@ -1,0 +1,1 @@
+console.log('Esto es una prueba y solo se ve en la vista de la imagen del gato')

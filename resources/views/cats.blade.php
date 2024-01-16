@@ -1,6 +1,4 @@
-@extends('sublayout')
-
-@section('sub-title', 'Gatuchos')
+@extends('subtitle')
 
 @section('sub-content')
     <p>¡Bienvenido a la sección de gatos!</p>
