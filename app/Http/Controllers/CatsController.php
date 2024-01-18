@@ -45,4 +45,9 @@ class CatsController extends Controller
         return view('catsImage');
     }
 
+    public function admin(): View
+    {
+        return view('admin');
+    }
+
 }
