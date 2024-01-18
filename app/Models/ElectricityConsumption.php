@@ -14,6 +14,5 @@ class ElectricityConsumption extends Model
     protected $fillable = [
         'date',
         'consumption_kwh',
-        
     ];
 }
